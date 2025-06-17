@@ -39,6 +39,14 @@
     </pipeline>
   </mode>
 
+  <mode name="uum-ukr-bilsearch">
+    <pipeline>
+      <program name="lt-paradigm --sort">
+        <file name="uum-ukr.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
   <!-- ukr → uum -->
 
   <mode name="ukr-uum" install="yes" gendebug="yes">
@@ -77,5 +85,11 @@
       </program>
     </pipeline>
   </mode>
+  <mode name="ukr-uum-bilsearch">
+    <pipeline>
+      <program name="lt-paradigm --sort">
+        <file name="ukr-uum.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
 </modes>
-
