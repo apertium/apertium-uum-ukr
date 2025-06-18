@@ -7,6 +7,7 @@
     <!-- Define symbol definitions within <sdef> here. -->
     <sdef n="n"               c="Noun"/>
     <sdef n="np"              c="Proper noun"/>
+    <sdef n="v"               c="Verb, lexical"/>
     <sdef n="vblex"           c="Verb, lexical"/>
     <sdef n="vbmod"           c="Modal verb"/>
     <sdef n="vaux"            c="Auxiliary verb"/>
@@ -44,6 +45,12 @@
     <sdef n="f"               c="Feminine"/>
     <sdef n="m"               c="Masculine"/>
     <sdef n="un"              c="No gender"/>
+
+    <sdef n="aa"              c="Animate"/>
+    <sdef n="nn"              c="Inanimate"/>
+
+    <sdef n="tv"              c="Transitive"/>
+    <sdef n="iv"              c="Intransitive"/>
 
     <sdef n="sg"              c="Singular"/>
     <sdef n="du"              c="Dual"/>
@@ -96,10 +103,22 @@
   </sdefs>
 
    <section id="main" type="standard">
-      <!-- Define entries within <e> here. -->
-      <!-- example:
-           <e><p><l>house<s n="n"/></l><r>casa<s n="n"/><s n="f"/></r></p></e>
-      -->
+      <!-- Nouns -->
+      <e><p><l>баш<s n="n"/></l>        <r>голова<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+      <e><p><l>мельэм<s n="n"/></l>     <r>комфорт<s n="n"/></r></p></e>
+      <e><p><l>дӱнйа<s n="n"/></l>      <r>світ<s n="n"/></r></p></e>
+      <e><p><l>келиш<s n="n"/></l>      <r>прихід<s n="n"/></r></p></e>
+      <e><p><l>оҗа<s n="n"/></l>        <r>чоловік<s n="n"/></r></p></e>
+      <e><p><l>хапу<s n="n"/></l>       <r>двері<s n="n"/></r></p></e>
+      
+      <!-- Verbs -->
+      <e><p><l>ди<s n="v"/><s n="iv"/></l>     <r>говорити<s n="vblex"/></r></p></e>
+      <e><p><l>сар<s n="v"/><s n="tv"/></l>    <r>загортати<s n="vblex"/></r></p></e>
+      <e><p><l>хой<s n="v"/><s n="tv"/></l>    <r>ставити<s n="vblex"/></r></p></e>
+      <e><p><l>йелир<s n="v"/><s n="iv"/></l>  <r>підходити<s n="vblex"/></r></p></e>
+      <e><p><l>эниш<s n="v"/><s n="iv"/></l>   <r>спускатися<s n="vblex"/></r></p></e>
+      <e><p><l>кийдир<s n="v"/><s n="tv"/></l> <r>класти<s n="vblex"/></r></p></e>
+      <e><p><l>ачтыр<s n="v"/><s n="tv"/></l>  <r>відкривати<s n="vblex"/></r></p></e>
 
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
       <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
