@@ -11,12 +11,12 @@
       </program>
 
 
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="uum-ukr.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
+      <!-- program name="apertium-tagger -g $2">
         <file name="uum-ukr.prob"/>
-      </program>
+      </program -->
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="uum-ukr.autobil.bin"/>
