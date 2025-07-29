@@ -16,6 +16,7 @@ TARGETS_DIR1 =		\
 	$(PREFIX1).autolex.bin	\
 	$(PREFIX1).autogen.bin	\
 	$(PREFIX1).autopgen.bin	\
+	$(PREFIX2).embeddings.hfst	\
 	$(PREFIX1).rtx.bin
 
 TRIMMED_TARGETS_DIR1 = \
@@ -106,6 +107,12 @@ $(PREFIX2).automorf-untrimmed.bin: $(AP_SRC2)/$(LANG2).automorf.bin
 
 $(PREFIX2).automorf.bin: $(PREFIX2).automorf-untrimmed.bin $(PREFIX2).autobil.bin
 	lt-trim $^ $@
+
+.deps/$(PREFIX2).embeddings-weighted.tsv: ./dev/embeddings/ukr-uum.embeddings.tsv
+	cat $< | awk -F'\t' '{ OFS=FS; $$NF=1- $$NF; }1' > $@
+
+$(PREFIX2).embeddings.hfst: .deps/$(PREFIX2).embeddings-weighted.tsv
+	hfst-strings2fst -f optimized-lookup-weighted -Sj $< -o $@
 
 # -------------------
 # Ukrainian generation:

@@ -119,4 +119,12 @@
     </pipeline>
   </mode>
 
+  <mode name="ukr-uum-embeddings">
+    <pipeline>
+      <program name="hfst-proc -W">
+        <file name="ukr-uum.embeddings.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
 </modes>
